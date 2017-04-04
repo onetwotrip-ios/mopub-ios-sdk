@@ -19,15 +19,15 @@
     objc_setAssociatedObject(self, @selector(mp_TouchAreaInsets), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
-{
-    UIEdgeInsets touchAreaInsets = self.mp_TouchAreaInsets;
-    CGRect bounds = self.bounds;
-    bounds = CGRectMake(bounds.origin.x - touchAreaInsets.left,
-                        bounds.origin.y - touchAreaInsets.top,
-                        bounds.size.width + touchAreaInsets.left + touchAreaInsets.right,
-                        bounds.size.height + touchAreaInsets.top + touchAreaInsets.bottom);
-    return CGRectContainsPoint(bounds, point);
-}
+//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+//{
+//    UIEdgeInsets touchAreaInsets = self.mp_TouchAreaInsets;
+//    CGRect bounds = self.bounds;
+//    bounds = CGRectMake(bounds.origin.x - touchAreaInsets.left,
+//                        bounds.origin.y - touchAreaInsets.top,
+//                        bounds.size.width + touchAreaInsets.left + touchAreaInsets.right,
+//                        bounds.size.height + touchAreaInsets.top + touchAreaInsets.bottom);
+//    return CGRectContainsPoint(bounds, point);
+//}
 
 @end
